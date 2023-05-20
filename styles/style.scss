@@ -77,7 +77,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.212);
             margin-bottom: 2px;
         }
     
@@ -116,6 +116,39 @@ body {
 
 .header {
     width: 100%;
-    height: 400px;
-    background-color: black;
+    height: 290px;
+    background: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+        &__title {
+            @include typo-text;
+            margin: 0 15px;            
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+        }
+        &__desc {
+            @include typo-text;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+        }
+        &__btn {
+            @include typo-text;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: white;
+            border: none;
+            width: 218px;
+            height: 50px;
+            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 25px;
+        }
 }
