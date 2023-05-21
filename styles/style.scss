@@ -99,17 +99,11 @@ body, html {
             margin-right: 17px;
         }
 
-        &__localisation input {
-            width: 120px;
-            height: 19px;
-            border: none;
-            outline: none;
-            background-color: #EAEAEA;
-            font-weight: 700;
+        &__localisation h1 {
+            font-weight: 500;
             font-size: 16px;
             line-height: 19px;
             color: #353535;
-            @include typo-text;
         }
 }
 
@@ -159,6 +153,7 @@ body, html {
 .fonction {
     width: 100%;
     padding: 40px 0;
+    box-sizing: border-box;
 
         &__title {
             @include typo-text;
@@ -177,7 +172,7 @@ body, html {
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             border-radius: 20px;
 
-            width: 280px;
+            width: 290px;
             height: 72px;
 
             display: flex;
@@ -286,4 +281,42 @@ body, html {
             right: 10px;
 
         }
+}
+
+/*SECTION FOOTER*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 25px;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 186px;
+    background: #353535;
+
+        &__title {
+            @include typo-title;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color:white;
+        }
+        &__links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+
+            margin-bottom: 7px;
+
+            display: flex;
+        }
+        &__links i {
+            width: 14px;
+            margin-right: 15px;
+        }
+       
 }
