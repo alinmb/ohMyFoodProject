@@ -158,8 +158,7 @@ body, html {
 
 .fonction {
     width: 100%;
-    height: 440px;
-    padding: 20px 0;
+    padding: 40px 0;
 
         &__title {
             @include typo-text;
@@ -212,5 +211,79 @@ body, html {
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+}
+
+/*SECTION MAIN : Restaurants */
+
+.restaurants {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #F7F7F7;
+        
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__cards .r-card {
+            width: 340px;
+            height: 251px;
+            border-radius: 15px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        &__cards .r-card img {
+            width: 340px;
+            height: 165px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            margin: 0;
+        }
+        &__cards .r-card h4 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            margin: 10px 0 5px 14px;
+        }
+        &__cards .r-card h5 {
+            font-weight: 300;
+            font-size: 17px;
+            line-height: 20px;
+            margin: 5px 0 5px 14px;
+        }
+        &__cards .r-card .heart-empty {
+            box-sizing: border-box;
+            font-size: 27px;
+
+            position: absolute;
+            bottom: 35px;
+            right: 20px;
+        }
+        &__cards .r-card p {
+            width: 80px;
+            height: 29px;
+            
+            color: #008766;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+
+            background: #99E2D0;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 2px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            top: 0;
+            right: 10px;
+
         }
 }
