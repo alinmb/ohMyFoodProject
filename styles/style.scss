@@ -78,7 +78,7 @@ body, html {
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.123);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.24);
             margin-bottom: 2px;
         }
     
@@ -99,7 +99,7 @@ body, html {
             margin-right: 17px;
         }
 
-        &__localisation h1 {
+        &__localisation h3 {
             font-weight: 500;
             font-size: 16px;
             line-height: 19px;
@@ -111,30 +111,28 @@ body, html {
 
 .header {
     width: 100%;
-    height: 290px;
+    height: 275px;
     background: #F7F7F7;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    padding: 30px 5px;
 
         &__title {
-            @include typo-text;
-            margin: 0 15px;            
+            margin: 0 50px;            
             font-weight: 700;
             font-size: 24px;
             line-height: 29px;
             text-align: center;
         }
         &__desc {
-            @include typo-text;
             font-weight: 300;
             font-size: 18px;
             line-height: 21px;
             text-align: center;
         }
         &__btn {
-            @include typo-text;
             font-weight: 500;
             font-size: 16px;
             line-height: 19px;
@@ -160,7 +158,7 @@ body, html {
             font-weight: 700;
             font-size: 24px;
             line-height: 28px;
-            margin: 0 0 20px 20px;
+            margin: 0 0 30px 20px;
         }
         &__cards {
             display: flex;
@@ -223,7 +221,7 @@ body, html {
         }
         &__cards .r-card {
             width: 340px;
-            height: 251px;
+            height: 240px;
             border-radius: 15px;
             background: #FFFFFF;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -255,7 +253,7 @@ body, html {
             font-size: 27px;
 
             position: absolute;
-            bottom: 35px;
+            bottom: 30px;
             right: 20px;
         }
         &__cards .r-card p {
@@ -299,7 +297,7 @@ body, html {
             @include typo-title;
             font-style: italic;
             font-weight: 400;
-            font-size: 18px;
+            font-size: 17px;
             line-height: 26px;
             color:white;
         }
@@ -313,9 +311,11 @@ body, html {
             margin-bottom: 7px;
 
             display: flex;
+            align-items: center;
         }
         &__links i {
-            width: 14px;
+            width: 12px;
+            font-size: 14px;
             margin-right: 15px;
         }
        
