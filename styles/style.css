@@ -44,8 +44,59 @@ body, html {
 .main-container {
   width: 100%;
   box-sizing: border-box;
+  transition: transform 0.5s;
+  animation: delay-show 0ms 3s both;
 }
 
+@keyframes delay-show {
+  0% {
+    transform: translateY(-9999px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*LOADER*/
+.loader-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: delete 0ms 3s both;
+  background-color: #F7F7F7;
+}
+
+@keyframes delete {
+  from {
+    height: 100vh;
+    width: 100%;
+  }
+  to {
+    height: 0vh;
+    width: 0%;
+    display: none;
+    transform: translateY(-9999px);
+  }
+}
+.loader {
+  border: 16px solid white;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s ease both;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* SECTION NAVIGATION */
 .nav {
   display: flex;
@@ -148,6 +199,7 @@ body, html {
   background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+  cursor: pointer;
   width: 290px;
   height: 72px;
   display: flex;
@@ -155,6 +207,9 @@ body, html {
   padding-left: 40px;
   position: relative;
   margin-bottom: 25px;
+}
+.fonction__cards .card:hover {
+  background: linear-gradient(200.64deg, rgba(146, 86, 220, 0.2039215686) -5.2%, rgba(255, 121, 217, 0.2196078431) 110.74%);
 }
 .fonction__cards .card h3 {
   font-weight: 500;
@@ -165,6 +220,9 @@ body, html {
   color: #7E7E7E;
   margin-right: 15px;
   font-size: 20px;
+}
+.fonction__cards .card .store-col {
+  color: #9356DC;
 }
 .fonction__cards .nums {
   position: absolute;
@@ -202,6 +260,7 @@ body, html {
   border-radius: 15px;
   position: relative;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .restaurants__cards .r-card img {
   width: 340px;
@@ -224,22 +283,25 @@ body, html {
   margin: 5px 0 5px 14px;
 }
 .restaurants__cards .r-card .heart-empty {
-  box-sizing: border-box;
   font-size: 25px;
-  cursor: pointer;
-  color: transparent;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
   position: absolute;
   bottom: 30px;
   right: 20px;
-  transition: 0.3s;
 }
-.restaurants__cards .r-card .heart-empty:hover {
+.restaurants__cards .r-card .heart-full {
+  color: transparent;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-text-stroke-color: #9356DC;
   -webkit-background-clip: text;
           background-clip: text;
+  font-size: 25px;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.restaurants__cards .r-card .heart-full:hover {
+  opacity: 1;
 }
 .restaurants__cards .r-card p {
   width: 80px;
@@ -258,6 +320,10 @@ body, html {
   position: absolute;
   top: 0;
   right: 10px;
+  transition: transform 0.5s;
+}
+.restaurants__cards .r-card p:hover {
+  transform: translateY(-5px);
 }
 
 /*SECTION FOOTER*/
