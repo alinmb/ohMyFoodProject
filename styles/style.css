@@ -653,7 +653,7 @@ body, html {
 .menu__cards:hover p {
   transform: translateX(-52px);
 }
-.menu__cards span {
+.menu__cards .alignement {
   display: flex;
   align-items: center;
 }
