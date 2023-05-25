@@ -651,7 +651,7 @@ body, html {
         box-sizing: border-box;
 
         animation: display-cards 1.1s;   
-        transform-origin: left;     
+        transform-origin: right;
         
         cursor: pointer;
 
@@ -683,7 +683,6 @@ body, html {
         position: absolute;
         right: 0px;
         transition: all .5s;
-        transform-origin: right;
 
         opacity: 0;
     }
@@ -691,11 +690,10 @@ body, html {
     &__cards:hover .menu__checked{
         width: 59px;
         opacity: 1;
+        transform: rotateY(360deg);  
     }
     &__cards:hover p{
-        transform: translateX(-52px);
-        
-        
+        transform: translateX(-52px);   
     }
     &__cards .alignement {
         display: flex;
@@ -728,7 +726,7 @@ body, html {
         }
     }
     &__cards:hover h4 {
-        width: 2800px;
+        width: 500px;
         margin-right: 90px;
     }
     &__cards p {
