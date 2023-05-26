@@ -650,8 +650,6 @@ body, html {
         justify-content: center;
         box-sizing: border-box;
 
-        animation: display-cards 1.1s;   
-        transform-origin: right;
         
         cursor: pointer;
 
@@ -783,4 +781,19 @@ body, html {
     } to {
         transform: scaleX(1);
     }
+}
+
+.entrees-animation {
+    animation: display-cards 1.1s ease-in-out;   
+    transform-origin: right;
+}
+
+.plats-animation {
+    animation: display-cards 1.1s ease-in-out;   
+    transform-origin: left;
+}
+
+.desserts-animation {
+    animation: display-cards 1.1s ease-in-out;   
+    transform-origin: right;
 }
