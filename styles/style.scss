@@ -598,7 +598,7 @@ body, html {
         font-size: 25px;
 
         @media screen and (min-width: 1024px) {
-            right: 360px;
+            right: 320px;
         }
         
     }
@@ -613,7 +613,7 @@ body, html {
         background-clip: text; 
         transition: opacity .5s;
         @media screen and (min-width: 1024px) {
-            right: 360px;
+            right: 320px;
         }
     }
     &__title .heart-full:hover {
@@ -713,10 +713,15 @@ body, html {
 
 
     &__cards h3 {
+        width: 300px;
         font-weight: 500;
         font-size: 18px;
         line-height: 21px;
         margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        white-space: nowrap;
+        transition: all .1s;
     }
     &__cards h4 {
         width: 300px;
@@ -739,6 +744,14 @@ body, html {
     &__cards:hover h4 {
         width: 500px;
         margin-right: 90px;
+    }
+    &__cards:hover h3 {
+        width: 250px;
+        margin-right: 90px;
+
+        @media screen and (min-width: 1024px) {
+            width: 600px;   
+        }
     }
     &__cards p {
         margin: 0;

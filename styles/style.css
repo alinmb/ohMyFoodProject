@@ -551,7 +551,7 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .menu__title .heart-empty {
-    right: 360px;
+    right: 320px;
   }
 }
 .menu__title .heart-full {
@@ -568,7 +568,7 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .menu__title .heart-full {
-    right: 360px;
+    right: 320px;
   }
 }
 .menu__title .heart-full:hover {
@@ -665,10 +665,15 @@ body, html {
   align-items: center;
 }
 .menu__cards h3 {
+  width: 300px;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.1s;
 }
 .menu__cards h4 {
   width: 300px;
@@ -694,6 +699,15 @@ body, html {
 .menu__cards:hover h4 {
   width: 500px;
   margin-right: 90px;
+}
+.menu__cards:hover h3 {
+  width: 250px;
+  margin-right: 90px;
+}
+@media screen and (min-width: 1024px) {
+  .menu__cards:hover h3 {
+    width: 600px;
+  }
 }
 .menu__cards p {
   margin: 0;
