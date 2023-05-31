@@ -625,6 +625,22 @@ body, html {
   cursor: pointer;
   position: relative;
 }
+.menu__cards:nth-child(1) {
+  animation: cards-load 0.6s ease-in 0.5s forwards;
+  transform: scale(0);
+}
+.menu__cards:nth-child(2) {
+  animation: cards-load 0.6s ease-in 0.7s forwards;
+  transform: scale(0);
+}
+.menu__cards:nth-child(3) {
+  animation: cards-load 0.6s ease-in 0.9s forwards;
+  transform: scale(0);
+}
+.menu__cards:nth-child(4) {
+  animation: cards-load 0.6s ease-in 0.9s forwards;
+  transform: scale(0);
+}
 @media screen and (min-width: 1024px) {
   .menu__cards {
     width: 634px;
@@ -751,25 +767,36 @@ body, html {
   cursor: pointer;
 }
 
-@keyframes display-cards {
+/*@keyframes display-cards {
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    } to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}*/
+@keyframes cards-load {
   from {
-    transform: scaleX(0);
+    transform: translateY(-70%);
+    opacity: 0;
   }
   to {
-    transform: scaleX(1);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
-.entrees-animation {
-  animation: display-cards 1.1s ease-in-out;
-  transform-origin: right;
+/*.entrees-animation {
+    animation: cards-load .6s ease-in .5s forwards; 
+    transform: scale(0);
 }
 
 .plats-animation {
-  animation: display-cards 1.1s ease-in-out;
-  transform-origin: left;
+    animation: cards-load .6s ease-in .6s forwards; 
+    transform: scale(0);
 }
 
 .desserts-animation {
-  animation: display-cards 1.1s ease-in-out;
-  transform-origin: right;
-}/*# sourceMappingURL=style.css.map */
+    animation: cards-load .6s ease-in .7s forwards; 
+    transform: scale(0);
+}*//*# sourceMappingURL=style.css.map */
