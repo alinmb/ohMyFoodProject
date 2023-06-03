@@ -31,8 +31,11 @@ Une partie FOOTER hors main-container :
     - 4 liens avec icons sur les 2 premiers
 
 */
-/* COULEURS & TYPOGRAPHIES */
-/* CORPS */
+/**** MIXIN Couleurs  ****/
+/**** MIXIN Typographies ****/
+/**** MIXIN Display ****/
+/**** MIXIN Ellipsis****/
+/**** CORPS ****/
 body, html {
   margin: 0;
   padding: 0;
@@ -53,14 +56,6 @@ body, html {
   box-sizing: border-box;
 }
 
-@keyframes delay-show {
-  0% {
-    transform: translateY(-9999px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 /*LOADER*/
 .loader-container {
   height: 100vh;
@@ -68,10 +63,22 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: delete 0ms 3s both;
+  animation: delete 0ms 3s forwards;
   background-color: #F7F7F7;
 }
 
+.loader {
+  border: 16px solid white;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-bottom: 16px solid #FF79DA;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s;
+}
+
+/**** ANIMATIONS KEYFRAMES ****/
 @keyframes delete {
   from {
     height: 100vh;
@@ -85,17 +92,14 @@ body, html {
     visibility: hidden;*/
   }
 }
-.loader {
-  border: 16px solid white;
-  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
-  border-radius: 50%;
-  border-top: 16px solid #9356DC;
-  border-bottom: 16px solid #FF79DA;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s ease both;
+@keyframes delay-show {
+  from {
+    transform: translateY(-9999px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -105,12 +109,18 @@ body, html {
   }
 }
 /* SECTION NAVIGATION */
+::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #353535;
+  opacity: 1; /* Firefox */
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #353535;
+  opacity: 1; /* Firefox */
+}
+
 .nav {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 113px;
-  z-index: 10;
 }
 .nav__logo {
   height: 63px;
@@ -134,13 +144,21 @@ body, html {
 }
 .nav__localisation .fa-solid {
   color: #353535;
-  margin-right: 17px;
+  margin-right: 10px;
 }
-.nav__localisation h3 {
-  font-weight: 500;
+.nav__localisation input {
+  width: 125px;
+  font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-  color: #353535;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+@media screen and (min-width: 1024px) {
+  .nav__localisation input {
+    width: 150px;
+  }
 }
 
 /* SECTION HEADER - Présentation */
@@ -232,6 +250,7 @@ body, html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 5px;
 }
 @media screen and (min-width: 1024px) {
   .fonction__cards {
@@ -564,7 +583,7 @@ body, html {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
           background-clip: text;
-  transition: opacity 0.5s;
+  transition: opacity 0.6s;
 }
 @media screen and (min-width: 1024px) {
   .menu__title .heart-full {
@@ -611,7 +630,7 @@ body, html {
   }
 }
 .menu__cards {
-  background: #FFFFFF;
+  background: white;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
   margin: 15px;
@@ -746,7 +765,7 @@ body, html {
   padding: 40px 0;
 }
 .order__btn {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(-193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   border: none;
@@ -767,15 +786,7 @@ body, html {
   cursor: pointer;
 }
 
-/*@keyframes display-cards {
-    from {
-        transform: scaleX(0);
-        opacity: 0;
-    } to {
-        transform: scaleX(1);
-        opacity: 1;
-    }
-}*/
+/**** ANIMATIONS Display cards ****/
 @keyframes cards-load {
   from {
     transform: translateY(-70%);
@@ -785,18 +796,4 @@ body, html {
     transform: translateY(0);
     opacity: 1;
   }
-}
-/*.entrees-animation {
-    animation: cards-load .6s ease-in .5s forwards; 
-    transform: scale(0);
-}
-
-.plats-animation {
-    animation: cards-load .6s ease-in .6s forwards; 
-    transform: scale(0);
-}
-
-.desserts-animation {
-    animation: cards-load .6s ease-in .7s forwards; 
-    transform: scale(0);
-}*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
