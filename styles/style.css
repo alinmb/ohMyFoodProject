@@ -34,7 +34,8 @@ Une partie FOOTER hors main-container :
 /**** MIXIN Couleurs  ****/
 /**** MIXIN Typographies ****/
 /**** MIXIN Display ****/
-/**** MIXIN Ellipsis****/
+/**** MIXIN Ellipsis ****/
+/**** MIXIN Boutons****/
 /**** CORPS ****/
 body, html {
   margin: 0;
@@ -48,7 +49,7 @@ body, html {
   width: 100%;
   box-sizing: border-box;
   transition: transform 0.5s;
-  animation: delay-show 0ms 3s both;
+  /*animation: delay-show 0ms 3s both; */
 }
 
 .page-container {
@@ -57,27 +58,25 @@ body, html {
 }
 
 /*LOADER*/
-.loader-container {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: delete 0ms 3s forwards;
-  background-color: #F7F7F7;
+/*.loader-container {
+    height: 100vh;
+    width: 100%;
+    @include display-flex-center;
+    animation: delete 0ms 3s forwards;
+    background-color: #F7F7F7; 
 }
 
 .loader {
-  border: 16px solid white;
-  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
-  border-radius: 50%;
-  border-top: 16px solid #9356DC;
-  border-bottom: 16px solid #FF79DA;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s;
-}
-
+    border: 16px solid white;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
+    border-radius: 50%;
+    border-top: 16px solid $main-color;
+    border-bottom: 16px solid $secondary-color;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s;
+  }
+  */
 /**** ANIMATIONS KEYFRAMES ****/
 @keyframes delete {
   from {
@@ -130,6 +129,11 @@ body, html {
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 1024px) {
+  .nav__logo {
+    height: 65px;
+  }
+}
 .nav__logo img {
   width: 162px;
 }
@@ -146,10 +150,16 @@ body, html {
   color: #353535;
   margin-right: 10px;
 }
+@media screen and (min-width: 1024px) {
+  .nav__localisation .fa-solid {
+    margin-left: 30px;
+    font-size: 13px;
+  }
+}
 .nav__localisation input {
   width: 125px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 19px;
   border: none;
   background-color: transparent;
@@ -174,8 +184,7 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .header {
-    justify-content: center;
-    height: 200px;
+    height: 230px;
   }
 }
 .header__title {
@@ -197,7 +206,13 @@ body, html {
   line-height: 21px;
   text-align: center;
 }
+@media screen and (min-width: 1024px) {
+  .header__desc {
+    margin: 25px 0;
+  }
+}
 .header__btn {
+  margin-top: 10px;
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
@@ -206,18 +221,20 @@ body, html {
   border: none;
   width: 218px;
   height: 50px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(-10deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
+  transition: transform 0.5s;
 }
 @media screen and (min-width: 1024px) {
   .header__btn {
-    height: 100px;
+    margin-top: 5px;
   }
 }
 .header__btn:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  transform: translateY(-5px);
 }
 
 /*SECTION MAIN : Fonctionnement */
@@ -228,7 +245,7 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .fonction {
-    width: 1000px;
+    width: 1100px;
     margin: 0 auto;
     padding: 40px 10px;
   }
@@ -242,8 +259,7 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .fonction__title {
-    width: 1000px;
-    margin: 30px auto;
+    margin: 0 0 30px 0px;
   }
 }
 .fonction__cards {
@@ -274,7 +290,7 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .fonction__cards .card {
-    margin-right: 30px;
+    margin-right: 50px;
   }
 }
 .fonction__cards .card:hover {
@@ -316,6 +332,18 @@ body, html {
   padding: 40px 0;
   background-color: #F7F7F7;
 }
+.restaurants__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 30px 20px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__title {
+    width: 1100px;
+    margin: 0 auto 30px auto;
+  }
+}
 .restaurants__cards {
   display: flex;
   flex-direction: column;
@@ -323,12 +351,12 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .restaurants__cards {
-    width: 1000px;
+    width: 1100px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, 480px);
-    grid-gap: 30px;
-    padding: 20px 10px;
+    grid-column-gap: 100px;
+    grid-row-gap: 30px;
   }
 }
 .restaurants__cards .r-card {
@@ -378,7 +406,9 @@ body, html {
   margin: 5px 0 5px 14px;
 }
 .restaurants__cards .r-card .heart-empty {
-  font-size: 25px;
+  font-size: 23px;
+  color: transparent;
+  -webkit-text-stroke: 1px #000000;
   position: absolute;
   bottom: 30px;
   right: 20px;
@@ -388,7 +418,7 @@ body, html {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
           background-clip: text;
-  font-size: 25px;
+  font-size: 23px;
   position: absolute;
   bottom: 30px;
   right: 20px;
@@ -437,7 +467,7 @@ body, html {
     justify-content: flex-start;
     align-items: center;
     padding-right: 80px;
-    height: 114px;
+    height: 100px;
   }
 }
 .footer__title {
@@ -450,14 +480,14 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .footer__title {
-    margin-left: 20px;
+    margin: 30px 0 0 20px;
     font-size: 18px;
   }
 }
 .footer__links a {
   color: white;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   margin-bottom: 7px;
@@ -466,7 +496,7 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .footer__links a {
-    margin-left: 20px;
+    margin: 30px 0 0 20px;
     font-size: 14px;
   }
 }
@@ -480,6 +510,7 @@ body, html {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin-right: 80px;
   }
 }
 
@@ -551,7 +582,7 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .menu__title {
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
   }
 }
 .menu__title h1 {
@@ -566,11 +597,14 @@ body, html {
   position: absolute;
   top: 45px;
   right: 20px;
-  font-size: 25px;
+  font-size: 23px;
+  color: transparent;
+  -webkit-text-stroke: 1px #000000;
 }
 @media screen and (min-width: 1024px) {
   .menu__title .heart-empty {
-    right: 320px;
+    top: 48px;
+    right: 350px;
   }
 }
 .menu__title .heart-full {
@@ -578,7 +612,7 @@ body, html {
   color: transparent;
   top: 45px;
   right: 20px;
-  font-size: 25px;
+  font-size: 23px;
   opacity: 0;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
@@ -587,7 +621,8 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .menu__title .heart-full {
-    right: 320px;
+    top: 48px;
+    right: 350px;
   }
 }
 .menu__title .heart-full:hover {
@@ -764,26 +799,29 @@ body, html {
   justify-content: center;
   padding: 40px 0;
 }
+@media screen and (min-width: 1024px) {
+  .order {
+    padding: 30px 0;
+  }
+}
 .order__btn {
-  background: linear-gradient(-193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 15px;
-  width: 186px;
-  height: 50px;
-  font-weight: bold;
+  cursor: pointer;
+  font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  color: white;
+  border: none;
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(-10deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
   transition: transform 0.5s;
 }
 .order__btn:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
   transform: translateY(-5px);
-  cursor: pointer;
 }
 
 /**** ANIMATIONS Display cards ****/
