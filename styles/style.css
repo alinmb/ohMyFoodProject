@@ -37,7 +37,8 @@ Une partie FOOTER hors main-container :
 /**** MIXIN Ellipsis ****/
 /**** MIXIN Boutons****/
 /**** CORPS ****/
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -48,7 +49,7 @@ body, html {
 .main-container {
   width: 100%;
   box-sizing: border-box;
-  animation: delay-show 0ms 3s both;
+  /*animation: delay-show 0ms 3s both;*/
 }
 
 .page-container {
@@ -57,27 +58,26 @@ body, html {
 }
 
 /*LOADER*/
+/*
 .loader-container {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: delete 0ms 3s forwards;
-  background-color: #F7F7F7;
+    height: 100vh;
+    width: 100%;
+    @include display-flex-center;
+    animation: delete 0ms 3s forwards;
+    background-color: #F7F7F7; 
 }
 
 .loader {
-  border: 16px solid white;
-  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
-  border-radius: 50%;
-  border-top: 16px solid #9356DC;
-  border-bottom: 16px solid #FF79DA;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s;
-}
-
+    border: 16px solid white;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
+    border-radius: 50%;
+    border-top: 16px solid $main-color;
+    border-bottom: 16px solid $secondary-color;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s;
+  }
+*/
 /**** ANIMATIONS KEYFRAMES ****/
 @keyframes delete {
   from {
@@ -109,13 +109,17 @@ body, html {
   }
 }
 /* SECTION NAVIGATION */
-::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #353535;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #353535;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
 .nav {
@@ -188,6 +192,11 @@ body, html {
     height: 230px;
   }
 }
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .header {
+    height: 210px;
+  }
+}
 .header__title {
   margin: 0 50px;
   font-weight: 700;
@@ -229,7 +238,8 @@ body, html {
 }
 @media screen and (min-width: 1024px) {
   .header__btn {
-    margin-top: 5px;
+    margin-top: 0px;
+    height: 70px;
   }
 }
 .header__btn:hover {
@@ -275,6 +285,14 @@ body, html {
     justify-content: flex-start;
   }
 }
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .fonction__cards {
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0px;
+    gap: 40px;
+  }
+}
 .fonction__cards .card {
   background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -294,6 +312,12 @@ body, html {
     margin-right: 50px;
   }
 }
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .fonction__cards .card {
+    width: 150px;
+    padding-left: 30px;
+  }
+}
 .fonction__cards .card:hover {
   background: linear-gradient(200.64deg, rgba(146, 86, 220, 0.2039215686) -5.2%, rgba(255, 121, 217, 0.2196078431) 110.74%);
   transform: translateY(-5px);
@@ -302,6 +326,11 @@ body, html {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+}
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .fonction__cards .card h3 {
+    font-size: 14px;
+  }
 }
 .fonction__cards .card i {
   color: #7E7E7E;
@@ -360,6 +389,15 @@ body, html {
     grid-row-gap: 30px;
   }
 }
+@media screen and (max-width: 768px) {
+  .restaurants__cards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+  }
+}
 .restaurants__cards .r-card {
   width: 340px;
   height: 240px;
@@ -377,6 +415,11 @@ body, html {
     width: 480px;
   }
 }
+@media screen and (max-width: 768px) {
+  .restaurants__cards .r-card {
+    width: 300px;
+  }
+}
 .restaurants__cards .r-card a {
   text-decoration: none;
   color: black;
@@ -392,6 +435,11 @@ body, html {
 @media screen and (min-width: 1024px) {
   .restaurants__cards .r-card img {
     width: 480px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .restaurants__cards .r-card img {
+    width: 100%;
   }
 }
 .restaurants__cards .r-card h4 {
