@@ -48,8 +48,7 @@ body, html {
 .main-container {
   width: 100%;
   box-sizing: border-box;
-  transition: transform 0.5s;
-  /*animation: delay-show 0ms 3s both; */
+  animation: delay-show 0ms 3s both;
 }
 
 .page-container {
@@ -58,25 +57,27 @@ body, html {
 }
 
 /*LOADER*/
-/*.loader-container {
-    height: 100vh;
-    width: 100%;
-    @include display-flex-center;
-    animation: delete 0ms 3s forwards;
-    background-color: #F7F7F7; 
+.loader-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: delete 0ms 3s forwards;
+  background-color: #F7F7F7;
 }
 
 .loader {
-    border: 16px solid white;
-    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
-    border-radius: 50%;
-    border-top: 16px solid $main-color;
-    border-bottom: 16px solid $secondary-color;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s;
-  }
-  */
+  border: 16px solid white;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-bottom: 16px solid #FF79DA;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s;
+}
+
 /**** ANIMATIONS KEYFRAMES ****/
 @keyframes delete {
   from {

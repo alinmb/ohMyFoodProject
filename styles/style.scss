@@ -101,8 +101,7 @@ body, html {
 .main-container {
     width: 100%;
     box-sizing: border-box;
-    transition: transform .5s;
-    /*animation: delay-show 0ms 3s both; */ 
+    animation: delay-show 0ms 3s both;
 }
 
 .page-container {
@@ -112,7 +111,7 @@ body, html {
 
 /*LOADER*/
 
-/*.loader-container {
+.loader-container {
     height: 100vh;
     width: 100%;
     @include display-flex-center;
@@ -130,7 +129,7 @@ body, html {
     height: 120px;
     animation: spin 2s;
   }
-  */
+
 
 /**** ANIMATIONS KEYFRAMES ****/
 @keyframes delete {
