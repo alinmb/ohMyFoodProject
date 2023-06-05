@@ -246,7 +246,7 @@ html {
         height: 230px;
     }
 
-    @media screen and (max-width: 768px) and (min-width: 600px) {
+    @media screen and (max-width: 1000px) and (min-width: 768px) {
         height: 210px;
     }
 
@@ -324,13 +324,14 @@ html {
             flex-direction: row;
             justify-content: flex-start;
         }
-@media screen and (max-width: 768px) and (min-width: 600px)  {
+
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             flex-direction: row;
             justify-content: center;
             margin-left: 0px;
             gap: 40px;
         }
-        
+
     }
 
     &__cards .card {
@@ -354,12 +355,11 @@ html {
         @media screen and (min-width: 1024px) {
             margin-right: 50px;
         }
-        @media screen and (max-width: 768px) and (min-width: 600px) {
+
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             width: 150px;
             padding-left: 30px;
         }
-
-       
     }
 
     &__cards .card:hover {
@@ -372,7 +372,7 @@ html {
         font-size: 16px;
         line-height: 19px;
 
-        @media screen and (max-width: 768px) and (min-width: 600px) {
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             font-size: 14px;
         }
     }
@@ -433,11 +433,12 @@ html {
             grid-column-gap: 100px;
             grid-row-gap: 30px;
         }
-        @media screen and (max-width: 768px) {
+
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             display: grid;
             justify-content: center;
             grid-template-columns: repeat(auto-fill, 300px);
-            grid-column-gap: 50px;
+            grid-column-gap: 20px;
             grid-row-gap: 20px;
         }
     }
@@ -458,7 +459,7 @@ html {
             width: 480px;
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             width: 300px;
         }
     }
@@ -478,10 +479,11 @@ html {
         @media screen and (min-width: 1024px) {
             width: 480px;
         }
-        @media screen and (max-width: 768px) {
+
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             width: 100%;
         }
-        
+
     }
 
     &__cards .r-card h4 {
@@ -643,7 +645,7 @@ html {
     margin: 0;
 
     &__img {
-        width: 375px;
+        width: 100%;
         height: 275px;
         object-fit: cover;
 
@@ -652,7 +654,7 @@ html {
             height: 500px;
         }
 
-        @media screen and (min-width: 390px) {
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             width: 100%;
             height: 275px;
         }
@@ -670,7 +672,7 @@ html {
     margin-bottom: -50px;
 
     @media screen and (min-width: 1024px) {
-        width: 1055px;
+        width: 1025px;
         margin: 0 auto -50px auto;
     }
 }
@@ -692,6 +694,10 @@ html {
         width: 307px;
 
         @media screen and (min-width: 1024px) {
+            margin: 0 auto 30px auto;
+        }
+
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             margin: 0 auto 30px auto;
         }
     }
@@ -719,6 +725,11 @@ html {
             right: 350px;
         }
 
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
+            top: 48px;
+            right: 210px;
+        }
+
     }
 
     &__title .heart-full {
@@ -735,6 +746,11 @@ html {
         @media screen and (min-width: 1024px) {
             top: 48px;
             right: 350px;
+        }
+
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
+            top: 48px;
+            right: 210px;
         }
     }
 
@@ -754,8 +770,8 @@ html {
             padding-left: 0px;
         }
 
-        @media screen and (min-width: 768px) {
-            margin-left: 210px;
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
+            margin-left: 70px;
             padding-left: 0px;
         }
     }
@@ -771,8 +787,8 @@ html {
             margin-left: 200px;
         }
 
-        @media screen and (min-width: 768px) {
-            margin-left: 210px;
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
+            margin-left: 70px;
         }
     }
 
@@ -818,7 +834,7 @@ html {
             margin-left: 200px;
         }
 
-        @media screen and (min-width: 768px) {
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             width: 634px;
             height: 72px;
             margin: 15px auto;
@@ -879,7 +895,7 @@ html {
             width: 600px;
         }
 
-        @media screen and (min-width: 768px) {
+        @media screen and (max-width: 1000px) and (min-width: 768px) {
             width: 600px;
         }
     }
