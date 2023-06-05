@@ -70,10 +70,11 @@ html {
   height: 100vh;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
   animation: delete 0ms 3s forwards;
-  background-color: #F7F7F7;
+  background-image: url(/images/logo/bg-loader.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .loader {
@@ -81,10 +82,11 @@ html {
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
   border-radius: 50%;
   border-top: 16px solid #9356DC;
-  border-bottom: 16px solid #FF79DA;
+  border-bottom: 16px solid #9356DC;
   width: 120px;
   height: 120px;
-  animation: spin 2s;
+  animation: spin 2s ease-in-out;
+  margin-top: 100px;
 }
 
 /* SECTION NAVIGATION */
