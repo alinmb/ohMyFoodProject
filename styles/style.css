@@ -1,84 +1,9 @@
 @charset "UTF-8";
-/*
-
-Projet ohMyFood déstructuration :
-
-Un main-container :
-    - padding 14px
-
-Une partie NAV composée de 2 parties :
-    - logo du restaurant 
-    - localisation
-
-Une partie HEADER composée de :
-    - un titre h1
-    - un descriptif h2 ou h3
-    - un bouton explorer
-
-Une partie MAIN composée de 2 SECTIONS :
-
-Section FONCTIONNEMENT =>
-    - un titre h1
-    - 3 boutons en position relative avec icon (fontawsome ? remixcon ?)
-    - 3 ronds numerotés en position absolute
-
-Section RESTAURANTS =>
-    - un titre h1 
-    - des cards => image, h1, h3, icon vide, "status nouveau"
-
-Une partie FOOTER hors main-container :
-    - logo du restaurant
-    - 4 liens avec icons sur les 2 premiers
-
-*/
-/**** MIXIN Couleurs  ****/
-/**** MIXIN Typographies ****/
+/**** IMPORT MODULE****/ /**** Variables Couleurs  ****/ /**** MIXIN Typographies ****/
 /**** MIXIN Display ****/
 /**** MIXIN Ellipsis ****/
 /**** MIXIN Boutons****/
-/**** CORPS ****/
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100%;
-  font-family: "Roboto", sans-serif;
-}
-
-.main-container {
-  width: 100%;
-  box-sizing: border-box;
-  /*animation: delay-show 0ms 3s both;*/
-}
-
-.page-container {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/*LOADER*/
-/*
-.loader-container {
-    height: 100vh;
-    width: 100%;
-    @include display-flex-center;
-    animation: delete 0ms 3s forwards;
-    background-color: #F7F7F7; 
-}
-
-.loader {
-    border: 16px solid white;
-    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
-    border-radius: 50%;
-    border-top: 16px solid $main-color;
-    border-bottom: 16px solid $secondary-color;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s;
-  }
-*/
-/**** ANIMATIONS KEYFRAMES ****/
+/**** ANIMATIONS LOADER ****/
 @keyframes delete {
   from {
     height: 100vh;
@@ -108,13 +33,61 @@ html {
     transform: rotate(360deg);
   }
 }
-/* SECTION NAVIGATION */
-::-moz-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #353535;
-  opacity: 1;
-  /* Firefox */
+/**** ANIMATIONS Display cards ****/
+@keyframes cards-load {
+  from {
+    transform: translateY(-70%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
+/**** CORPS ****/
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+  width: 100%;
+  box-sizing: border-box;
+  animation: delay-show 0ms 3s both;
+}
+
+.page-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/*LOADER*/
+.loader-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: delete 0ms 3s forwards;
+  background-color: #F7F7F7;
+}
+
+.loader {
+  border: 16px solid white;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.212);
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-bottom: 16px solid #FF79DA;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s;
+}
+
+/* SECTION NAVIGATION */
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #353535;
@@ -427,8 +400,7 @@ html {
 .restaurants__cards .r-card img {
   width: 340px;
   height: 165px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 15px 15px 0 0;
   margin: 0;
 }
@@ -465,8 +437,8 @@ html {
 .restaurants__cards .r-card .heart-full {
   color: transparent;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
   -webkit-background-clip: text;
-          background-clip: text;
   font-size: 23px;
   position: absolute;
   bottom: 30px;
@@ -582,8 +554,7 @@ html {
 .h-palette__img {
   width: 100%;
   height: 275px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (min-width: 1024px) {
   .h-palette__img {
@@ -675,8 +646,7 @@ html {
   font-size: 23px;
   opacity: 0;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   transition: opacity 0.6s;
 }
 @media screen and (min-width: 1024px) {
@@ -890,14 +860,4 @@ html {
   transform: translateY(-5px);
 }
 
-/**** ANIMATIONS Display cards ****/
-@keyframes cards-load {
-  from {
-    transform: translateY(-70%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */

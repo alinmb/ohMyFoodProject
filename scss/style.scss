@@ -1,96 +1,9 @@
-/*
-
-Projet ohMyFood déstructuration :
-
-Un main-container :
-    - padding 14px
-
-Une partie NAV composée de 2 parties :
-    - logo du restaurant 
-    - localisation
-
-Une partie HEADER composée de :
-    - un titre h1
-    - un descriptif h2 ou h3
-    - un bouton explorer
-
-Une partie MAIN composée de 2 SECTIONS :
-
-Section FONCTIONNEMENT =>
-    - un titre h1
-    - 3 boutons en position relative avec icon (fontawsome ? remixcon ?)
-    - 3 ronds numerotés en position absolute
-
-Section RESTAURANTS =>
-    - un titre h1 
-    - des cards => image, h1, h3, icon vide, "status nouveau"
-
-Une partie FOOTER hors main-container :
-    - logo du restaurant
-    - 4 liens avec icons sur les 2 premiers
-
-*/
-
-
-/**** MIXIN Couleurs  ****/
-$main-color : #9356DC;
-$secondary-color: #FF79DA;
-$third-color: #99E2D0;
-$body-color: white;
-
-/**** MIXIN Typographies ****/
-@mixin typo-title {
-    font-family: 'Shrikhand', cursive;
-}
-
-@mixin typo-text {
-    font-family: 'Roboto', sans-serif;
-}
-
-/**** MIXIN Display ****/
-@mixin display-flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin display-flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-/**** MIXIN Ellipsis ****/
-@mixin text-ellipsis {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-/**** MIXIN Boutons****/
-
-@mixin btn-gradient {
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: white;
-    border: none;
-    width: 218px;
-    height: 50px;
-    background: linear-gradient(-10deg, #9356DC -11.44%, #FF79DA 123.93%);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    transition: transform .5s;
-}
-
-@mixin btn-gradient-hover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(-10deg, #9356DC -5.2%, #FF79DA 110.74%);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-    transform: translateY(-5px);
-}
+/**** IMPORT MODULE****/
+@import './variables';
+@import './mixins';
+@import './keyframes';
 
 /**** CORPS ****/
-
 body,
 html {
     margin: 0;
@@ -103,7 +16,7 @@ html {
 .main-container {
     width: 100%;
     box-sizing: border-box;
-    /*animation: delay-show 0ms 3s both;*/
+    animation: delay-show 0ms 3s both;
 }
 
 .page-container {
@@ -112,7 +25,7 @@ html {
 }
 
 /*LOADER*/
-/*
+
 .loader-container {
     height: 100vh;
     width: 100%;
@@ -131,49 +44,13 @@ html {
     height: 120px;
     animation: spin 2s;
   }
-*/
 
-/**** ANIMATIONS KEYFRAMES ****/
-@keyframes delete {
-    from {
-        height: 100vh;
-        width: 100%;
-    }
-
-    to {
-        height: 0vh;
-        width: 0%;
-        display: none;
-        /*transform: translateY(-9999px);
-        visibility: hidden;*/
-    }
-}
-
-@keyframes delay-show {
-    from {
-        transform: translateY(-9999px);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 /* SECTION NAVIGATION */
 
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #353535;
+    color: $dark-grey;
     ;
     opacity: 1;
     /* Firefox */
@@ -207,7 +84,7 @@ html {
     }
 
     &__localisation .fa-solid {
-        color: #353535;
+        color: $dark-grey;
         margin-right: 10px;
 
         @media screen and (min-width: 1024px) {
@@ -515,6 +392,7 @@ html {
         color: transparent;
         background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
         background-clip: text;
+        -webkit-background-clip: text;
 
         font-size: 23px;
 
@@ -565,7 +443,7 @@ html {
     box-sizing: border-box;
     width: 100%;
     height: 186px;
-    background: #353535;
+    background: $dark-grey;
 
     @media screen and (min-width: 1024px) {
         flex-direction: row-reverse;
@@ -633,7 +511,7 @@ html {
     top: 19px;
     left: 22px;
     font-weight: bold;
-    color: #353535;
+    color: $dark-grey;
     font-size: 22px;
     cursor: pointer;
 }
@@ -708,7 +586,6 @@ html {
         line-height: 41px;
         color: #101010;
         padding-left: 15px;
-
         @include typo-title;
     }
 
@@ -919,7 +796,7 @@ html {
         font-weight: 700;
         font-size: 15px;
         line-height: 18px;
-        color: #353535;
+        color: $dark-grey;
         transition: transform .5s;
 
     }
@@ -948,17 +825,3 @@ html {
     }
 }
 
-/**** ANIMATIONS Display cards ****/
-
-@keyframes cards-load {
-    from {
-        transform: translateY(-70%);
-        opacity: 0;
-
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}

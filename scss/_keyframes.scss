@@ -1,0 +1,50 @@
+/**** ANIMATIONS LOADER ****/
+@keyframes delete {
+    from {
+        height: 100vh;
+        width: 100%;
+    }
+
+    to {
+        height: 0vh;
+        width: 0%;
+        display: none;
+        /*transform: translateY(-9999px);
+        visibility: hidden;*/
+    }
+}
+
+@keyframes delay-show {
+    from {
+        transform: translateY(-9999px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/**** ANIMATIONS Display cards ****/
+
+@keyframes cards-load {
+    from {
+        transform: translateY(-70%);
+        opacity: 0;
+
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
