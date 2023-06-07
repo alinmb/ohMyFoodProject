@@ -335,6 +335,8 @@ html {
         margin-bottom: 20px;
         cursor: pointer;
         transition: transform .5s;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
 
         @media screen and (min-width: 1024px) {
             width: 480px;
@@ -384,26 +386,20 @@ html {
     &__cards .r-card .heart-empty {
         font-size: 23px;
         color: transparent;
-
         -webkit-text-stroke: 1px #000000;
-
         position: absolute;
         bottom: 30px;
         right: 20px;
     }
-
     &__cards .r-card .heart-full {
         color: transparent;
         background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
         background-clip: text;
         -webkit-background-clip: text;
-
         font-size: 23px;
-
         position: absolute;
         bottom: 30px;
         right: 20px;
-
         opacity: 0;
         transition: opacity .5s;
     }
@@ -683,6 +679,8 @@ html {
         padding: 0 15px;
         width: 349px;
         height: 72px;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
 
         @include display-flex-column;
         justify-content: center;
@@ -731,11 +729,9 @@ html {
         @include display-flex-center;
         background: #99E2D0;
         border-radius: 0px 15px 15px 0px;
-
         position: absolute;
         right: 0px;
         transition: all .5s;
-
         opacity: 0;
     }
 
