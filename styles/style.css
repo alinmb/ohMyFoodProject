@@ -162,14 +162,15 @@ html {
   box-sizing: border-box;
   padding: 30px 5px;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding: 10px 5px;
+    height: 160px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .header {
     height: 230px;
-  }
-}
-@media screen and (max-width: 1000px) and (min-width: 768px) {
-  .header {
-    height: 210px;
   }
 }
 .header__title {
@@ -190,6 +191,7 @@ html {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+  margin: 0 3px;
 }
 @media screen and (min-width: 1024px) {
   .header__desc {
@@ -210,6 +212,11 @@ html {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   transition: transform 0.5s;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header__btn {
+    margin-top: 20px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .header__btn {
@@ -260,12 +267,12 @@ html {
     justify-content: flex-start;
   }
 }
-@media screen and (max-width: 1000px) and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .fonction__cards {
     flex-direction: row;
     justify-content: center;
     margin-left: 0px;
-    gap: 40px;
+    height: 100px;
   }
 }
 .fonction__cards .card {
@@ -273,7 +280,7 @@ html {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   cursor: pointer;
-  width: 290px;
+  width: 75%;
   height: 72px;
   display: flex;
   align-items: center;
@@ -282,15 +289,17 @@ html {
   margin-bottom: 25px;
   transition: all 0.5s;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .fonction__cards .card {
+    margin: 0 30px 0 0;
+    width: 25%;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+}
 @media screen and (min-width: 1024px) {
   .fonction__cards .card {
     margin-right: 50px;
-  }
-}
-@media screen and (max-width: 1000px) and (min-width: 768px) {
-  .fonction__cards .card {
-    width: 150px;
-    padding-left: 30px;
   }
 }
 .fonction__cards .card:hover {
@@ -354,27 +363,25 @@ html {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurants__cards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 45%);
+    grid-column-gap: 25px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .restaurants__cards {
     width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 480px);
-    grid-column-gap: 100px;
+    grid-template-columns: repeat(auto-fill, 50%);
     grid-row-gap: 30px;
   }
 }
-@media screen and (max-width: 1000px) and (min-width: 768px) {
-  .restaurants__cards {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, 300px);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-  }
-}
 .restaurants__cards .r-card {
-  width: 340px;
+  width: 85%;
   height: 240px;
   border-radius: 15px;
   background: #FFFFFF;
@@ -387,14 +394,9 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .restaurants__cards .r-card {
-    width: 480px;
-  }
-}
-@media screen and (max-width: 1000px) and (min-width: 768px) {
-  .restaurants__cards .r-card {
-    width: 300px;
+    width: 100%;
   }
 }
 .restaurants__cards .r-card a {
@@ -402,18 +404,13 @@ html {
   color: black;
 }
 .restaurants__cards .r-card img {
-  width: 340px;
+  width: 100%;
   height: 165px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
   margin: 0;
 }
-@media screen and (min-width: 1024px) {
-  .restaurants__cards .r-card img {
-    width: 480px;
-  }
-}
-@media screen and (max-width: 1000px) and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .restaurants__cards .r-card img {
     width: 100%;
   }
