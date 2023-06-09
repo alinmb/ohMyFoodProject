@@ -57,7 +57,7 @@ html {
 .main-container {
   width: 100%;
   box-sizing: border-box;
-  animation: delay-show 0ms 3s both;
+  /*animation: delay-show 0ms 3s both;*/
 }
 
 .page-container {
