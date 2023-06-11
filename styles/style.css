@@ -57,7 +57,7 @@ html {
 .main-container {
   width: 100%;
   box-sizing: border-box;
-  /*animation: delay-show 0ms 3s both;*/
+  animation: delay-show 0ms 3s both;
 }
 
 .page-container {
@@ -691,6 +691,12 @@ html {
     padding-left: 0px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu__desc {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
 .menu__bord {
   border: 1px solid #99E2D0;
   margin-left: 15px;
@@ -701,6 +707,13 @@ html {
 @media screen and (min-width: 1024px) {
   .menu__bord {
     margin-left: 200px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu__bord {
+    margin: 0 auto;
+    top: 5px;
+    width: 40px;
   }
 }
 .menu__cards {
