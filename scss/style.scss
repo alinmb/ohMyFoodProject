@@ -71,7 +71,7 @@ html {
         background-color: $body-color;
         @include display-flex-center;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             height: 65px;
         }
     }
@@ -92,7 +92,7 @@ html {
         color: $dark-grey;
         margin-right: 10px;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             margin-left: 30px;
             font-size: 13px;
         }
@@ -107,7 +107,7 @@ html {
         background-color: transparent;
         outline: none;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             width: 150px;
         }
     }
@@ -124,12 +124,12 @@ html {
     box-sizing: border-box;
     padding: 30px 5px;
 
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @media screen and (min-width: 768px) and (max-width: 1100px) {
         padding: 10px 5px;
         height: 160px;
     }
-    
-    @media screen and (min-width: 1024px) {
+
+    @media screen and (min-width: 1100px) {
         height: 230px;
     }
 
@@ -140,7 +140,7 @@ html {
         line-height: 29px;
         text-align: center;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             font-size: 40px;
             line-height: 47px;
         }
@@ -153,7 +153,7 @@ html {
         text-align: center;
         margin: 0 3px 5px 3px;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             margin: 25px 0;
         }
     }
@@ -162,11 +162,11 @@ html {
         margin-top: 10px;
         @include btn-gradient;
 
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @media screen and (min-width: 768px) and (max-width: 1100px) {
             margin-top: 20px;
         }
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             margin-top: 0px;
             height: 70px;
         }
@@ -185,7 +185,7 @@ html {
     padding: 40px 0;
     box-sizing: border-box;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1100px) {
         width: 1100px;
         margin: 0 auto;
         padding: 40px 10px;
@@ -198,7 +198,7 @@ html {
         line-height: 28px;
         margin: 0 0 30px 20px;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             margin: 0 0 30px 0px;
         }
     }
@@ -208,18 +208,10 @@ html {
         align-items: center;
         margin-left: 5px;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             flex-direction: row;
             justify-content: flex-start;
         }
-
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
-            /*flex-direction: row;
-            justify-content: center;
-            margin-left: 0px;
-            height: 100px;*/
-        }
-        
     }
 
     &__cards .card {
@@ -236,19 +228,19 @@ html {
         margin-bottom: 25px;
         transition: all .5s;
 
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
 
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @media screen and (min-width: 768px) and (max-width: 1100px) {
             margin: 10px;
             width: 90%;
             padding-left: 0px;
             box-sizing: border-box;
             justify-content: center;
-            
+
         }
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             margin-right: 50px;
         }
     }
@@ -263,7 +255,7 @@ html {
         font-size: 16px;
         line-height: 19px;
 
-        @media screen and (max-width: 1000px) and (min-width: 768px) {
+        @media screen and (max-width: 1000px) and (min-width: 1100px) {
             font-size: 14px;
         }
     }
@@ -274,7 +266,7 @@ html {
         font-size: 20px;
     }
 
-    &__cards .card:hover > .fa-solid {
+    &__cards .card:hover>.fa-solid {
         color: $main-color;
     }
 
@@ -306,7 +298,7 @@ html {
         line-height: 28px;
         margin: 0 0 30px 20px;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             width: 1100px;
             margin: 0 auto 30px auto;
         }
@@ -316,21 +308,21 @@ html {
         @include display-flex-column;
         align-items: center;
 
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @media screen and (min-width: 768px) and (max-width: 1100px) {
             display: grid;
             justify-content: center;
             grid-template-columns: repeat(auto-fill, 45%);
             grid-column-gap: 25px;
         }
-        
-        @media screen and (min-width: 1024px) {
+
+        @media screen and (min-width: 1100px) {
             width: 1100px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fill, 50%);
             grid-row-gap: 30px;
         }
-        
+
     }
 
     &__cards .r-card {
@@ -344,10 +336,10 @@ html {
         margin-bottom: 20px;
         cursor: pointer;
         transition: transform .5s;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
 
-        @media screen and (min-width: 768px) and (max-width: 1024px){
+        @media screen and (min-width: 768px) and (max-width: 1100px) {
             width: 100%;
         }
     }
@@ -364,7 +356,7 @@ html {
         border-radius: 15px 15px 0 0;
         margin: 0;
 
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @media screen and (min-width: 768px) and (max-width: 1100px) {
             width: 100%;
         }
 
@@ -392,6 +384,7 @@ html {
         bottom: 30px;
         right: 20px;
     }
+
     &__cards .r-card .heart-full {
         color: transparent;
         background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -446,7 +439,7 @@ html {
     height: 186px;
     background: $dark-grey;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1100px) {
         flex-direction: row-reverse;
         justify-content: flex-start;
         align-items: center;
@@ -462,7 +455,7 @@ html {
         line-height: 26px;
         color: white;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             margin: 30px 0 0 20px;
             font-size: 18px;
         }
@@ -480,7 +473,7 @@ html {
         display: flex;
         align-items: center;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             margin: 30px 0 0 20px;
             font-size: 14px;
 
@@ -494,7 +487,7 @@ html {
     }
 
     &__links {
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1100px) {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
