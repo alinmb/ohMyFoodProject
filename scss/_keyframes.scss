@@ -13,11 +13,12 @@
 
 @keyframes delay-show {
     from {
-        transform: translateY(-9999px);
+        transform: translateX(-9999px);
+        position: fixed;
     }
 
     to {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
