@@ -1,2 +1,2 @@
 # ohMyFoodProject
-https://github.com/alinmb/ohMyFoodProject
+https://alinmb.github.io/ohMyFoodProject/
